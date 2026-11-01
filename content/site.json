@@ -2,7 +2,7 @@
  "brand": "CANOPY",
  "domain": "https://canopyfurniture.com.bd",
  "phone": "+8801XXXXXXXXX",
- "whatsapp": "8801XXXXXXXXX",
+ "whatsapp": "8801839039416",
  "email": "hello@canopyfurniture.com.bd",
  "formAction": "https://formspree.io/f/YOUR_FORM_ID",
  "address": {
@@ -10,7 +10,7 @@
   "bn": "জিইসি সার্কেল, চট্টগ্রাম"
  },
  "social": {
-  "Facebook": "https://facebook.com/",
+    "Facebook": "https://www.facebook.com/profile.php?id=61560038396432",
   "Instagram": "https://instagram.com/",
   "YouTube": "https://youtube.com/"
  },
@@ -19,6 +19,7 @@
    "promo": "Free delivery in Chattogram · EMI available",
    "slogan": "fits everywhere",
    "tagline": "Furniture in Chattogram",
+   "image": "images/agico.webp",
    "desc": "Canopy Furniture: solid wood sofas, beds, dining and office furniture in Chattogram, Bangladesh.",
    "hero": "Comfort that fits every corner",
    "sub": "Solid wood frames and soft-touch fabrics designed for real homes.",
@@ -28,6 +29,7 @@
    "promo": "চট্টগ্রামে ফ্রি ডেলিভারি · ইএমআই সুবিধা",
    "slogan": "fits everywhere",
    "tagline": "চট্টগ্রামের ফার্নিচার",
+   "image": "images/agico.webp",
    "desc": "ক্যানোপি ফার্নিচার: চট্টগ্রামে সলিড কাঠের সোফা, খাট, ডাইনিং ও অফিস ফার্নিচার।",
    "hero": "আরাম, যা প্রতিটি কোণে মানানসই",
    "sub": "সলিড কাঠের ফ্রেম ও নরম ফ্যাব্রিকে তৈরি আপনার ঘরের জন্য।",
