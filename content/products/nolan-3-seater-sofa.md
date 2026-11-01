@@ -2,6 +2,7 @@
 title: Nolan 3-Seater Sofa
 title_bn: নোলান ৩-সিটার সোফা
 category: living
+image: /images/strabery.jpeg
 sub: sofas
 price: 72900
 old: 84500
