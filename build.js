@@ -1,0 +1,44 @@
+// Canopy static site generator. No dependencies. Run: node build.js -> dist/
+const fs=require('fs'),P=require('path'),R=__dirname,C=p=>P.join(R,'content',p),O=P.join(R,'dist');
+const S=JSON.parse(fs.readFileSync(C('site.json'),'utf8'));
+const UI={en:{shop:'Shop now',price:'Tk',call:'Call',wa:'Order on WhatsApp',works:'Our Works',blog:'Blog',areas:'Areas',testi:'What our customers say',room:'Shop by room',trend:'Trending at Canopy',lang:'বাংলা',enq:'Send enquiry',name:'Your name',phone:'Phone',msg:'Message',visit:'Visit our showrooms',rel:'You may also like',none:'Products coming soon.'},
+bn:{shop:'এখনই কিনুন',price:'৳',call:'কল করুন',wa:'হোয়াটসঅ্যাপে অর্ডার',works:'আমাদের কাজ',blog:'ব্লগ',areas:'এলাকা',testi:'গ্রাহকদের মতামত',room:'রুম অনুযায়ী কিনুন',trend:'ক্যানোপিতে জনপ্রিয়',lang:'English',enq:'অনুসন্ধান পাঠান',name:'আপনার নাম',phone:'ফোন',msg:'বার্তা',visit:'আমাদের শোরুম',rel:'আপনার পছন্দ হতে পারে',none:'পণ্য শীঘ্রই আসছে।'}};
+const fmt=n=>Number(n).toLocaleString('en-IN');
+const md=s=>s.split(/\n{2,}/).map(b=>{b=b.trim();if(!b)return'';
+ const i=t=>t.replace(/!\[(.*?)\]\((.*?)\)/g,'<img src="$2" alt="$1">').replace(/\[(.*?)\]\((.*?)\)/g,'<a href="$2">$1</a>').replace(/\*\*(.*?)\*\*/g,'<b>$1</b>');
+ const m=b.match(/^(#{1,3}) (.*)/);if(m)return`<h${m[1].length}>${i(m[2])}</h${m[1].length}>`;
+ if(/^- /.test(b))return'<ul>'+b.split('\n').map(l=>'<li>'+i(l.slice(2))+'</li>').join('')+'</ul>';
+ return'<p>'+i(b)+'</p>'}).join('');
+const load=d=>fs.existsSync(C(d))?fs.readdirSync(C(d)).filter(f=>f.endsWith('.md')).map(n=>{
+ const m=fs.readFileSync(C(d+'/'+n),'utf8').match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);const o={slug:n.slice(0,-3)};
+ m[1].split('\n').forEach(l=>{const k=l.indexOf(':');if(k>0)o[l.slice(0,k).trim()]=l.slice(k+1).trim()});
+ const[en,bn]=m[2].split(/^<!--bn-->\s*$/m);o.body={en:en||'',bn:bn||en||''};return o}):[];
+const f=(o,k,l)=>(l=='bn'&&o[k+'_bn'])||o[k]||'';
+const u=(l,p)=>(l=='bn'?'/bn':'')+p;
+const img=(o,l)=>o.image?`<img src="${o.image}" alt="${f(o,'title',l)}" loading=lazy>`:`<div class=ph>${f(o,'title',l)}</div>`;
+const pages=[];
+function out(l,p,title,desc,body,ld){const t=UI[l],o=l=='en'?'bn':'en',T=S.t[l];pages.push(p);
+ const nav=S.cats.map(c=>`<li class=dd><a href="${u(l,'/category/'+c.slug+'/')}">${c[l]}</a><div>${c.subs.map(s=>`<a href="${u(l,'/category/'+s.slug+'/')}">${s[l]}</a>`).join('')}</div></li>`).join('');
+ const html=`<!doctype html><html lang="${l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} | ${S.brand}</title><meta name="description" content="${desc}"><link rel="canonical" href="${S.domain}${u(l,p)}"><link rel="alternate" hreflang="en" href="${S.domain}${p}"><link rel="alternate" hreflang="bn" href="${S.domain}/bn${p}"><link rel="stylesheet" href="/style.css"><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Jost&display=swap" rel="stylesheet">${ld?`<script type="application/ld+json">${JSON.stringify(ld)}</script>`:''}</head><body><div class=top>${T.promo}</div><header><a class=logo href="${u(l,'/')}">${S.brand}<small>${T.slogan}</small></a><nav><ul>${nav}<li><a href="${u(l,'/works/')}">${t.works}</a></li><li><a href="${u(l,'/blog/')}">${t.blog}</a></li><li><a href="${u(l,'/areas/')}">${t.areas}</a></li></ul></nav><a class=lang href="${u(o,p)}">${t.lang}</a></header><main>${body}</main><footer><div><b>${S.brand}</b><p>${S.address[l]}</p><p><a href="tel:${S.phone}">${S.phone}</a> · <a href="mailto:${S.email}">${S.email}</a></p></div><div>${Object.entries(S.social).map(([k,v])=>`<a href="${v}">${k}</a>`).join(' · ')}</div><div>${S.cats.map(c=>`<a href="${u(l,'/category/'+c.slug+'/')}">${c[l]}</a>`).join(' ')}</div></footer><a class=wa href="https://wa.me/${S.whatsapp}">WhatsApp</a></body></html>`;
+ const fp=P.join(O,u(l,p),'index.html');fs.mkdirSync(P.dirname(fp),{recursive:true});fs.writeFileSync(fp,html)}
+fs.rmSync(O,{recursive:true,force:true});
+const prods=load('products'),works=load('works'),blog=load('blog').sort((a,b)=>b.date>a.date?1:-1),areas=load('areas'),tests=load('testimonials'),pg=load('pages');
+for(const l of['en','bn']){const t=UI[l],T=S.t[l];
+ const card=x=>`<a class=card data-t="${x.tag||''}" href="${u(l,'/product/'+x.slug+'/')}">${x.tag?`<i>${x.tag}</i>`:''}${img(x,l)}<small>${x.sub}</small><h3>${f(x,'title',l)}</h3><p>${t.price} ${fmt(x.price)}${x.old?` <s>${fmt(x.old)}</s>`:''}</p></a>`;
+ const grid=a=>a.length?`<div class=grid>${a.map(card).join('')}</div>`:`<p>${t.none}</p>`;
+ const form=ref=>`<form class=enq method=post action="${S.formAction}"><h3>${t.enq}</h3><input type=hidden name=ref value="${ref}"><input name=name placeholder="${t.name}" required><input name=phone placeholder="${t.phone}" required><textarea name=message placeholder="${t.msg}"></textarea><button class=btn>${t.enq}</button></form>`;
+ const rooms=S.showrooms.map(s=>`<div class=sr><small>${s.city[l]}</small><b>${s.area[l]}</b><p>${s.hours}</p></div>`).join('');
+ const tm=`<section class=tm><h2>${t.testi}</h2><div class=grid3>${tests.map(x=>`<blockquote>${md(x.body[l])}<cite>${f(x,'title',l)}, ${f(x,'place',l)}</cite></blockquote>`).join('')}</div></section>`;
+ out(l,'/',S.brand+' – '+T.tagline,T.desc,`<section class=hero><div><h1>${T.hero}</h1><p>${T.sub}</p><a class=btn href="${u(l,'/category/living/')}">${t.shop}</a></div></section>${tm}<section class=svc>${S.services.map(s=>`<div><b>${s[l]}</b></div>`).join('')}</section><section><h2>${t.room}</h2><div class=rooms>${S.cats.map(c=>`<a href="${u(l,'/category/'+c.slug+'/')}"><div class="ph round">${c[l]}</div><b>${c[l]}</b><small>${prods.filter(p=>p.category==c.slug).length}</small></a>`).join('')}</div></section><section class=alt><h2>${t.trend}</h2><p class=tabs>${['All','New','Sale','Bestseller'].map(x=>`<button data-f="${x}">${x}</button>`).join('')}</p>${grid(prods.slice(0,8))}</section><section class=dark><h2>${T.dining}</h2><a class=btn href="${u(l,'/category/dining/')}">${t.shop}</a></section><section><h2>${t.visit}</h2><div class=grid>${rooms}</div></section><script>document.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>document.querySelectorAll('.alt .card').forEach(c=>c.hidden=b.dataset.f!='All'&&c.dataset.t!=b.dataset.f))</script>`,{'@context':'https://schema.org','@type':'FurnitureStore',name:S.brand,telephone:S.phone,address:{'@type':'PostalAddress',addressLocality:'Chattogram',addressCountry:'BD'}});
+ for(const c of S.cats){out(l,'/category/'+c.slug+'/',c[l],c[l]+' – '+S.brand,`<h1>${c[l]}</h1><p class=subs>${c.subs.map(s=>`<a href="${u(l,'/category/'+s.slug+'/')}">${s[l]}</a>`).join('')}</p>${grid(prods.filter(p=>p.category==c.slug))}`);
+  for(const s of c.subs)out(l,'/category/'+s.slug+'/',s[l],s[l]+' – '+S.brand,`<h1>${s[l]}</h1>${grid(prods.filter(p=>p.sub==s.slug))}`)}
+ for(const p of prods){const n=f(p,'title',l);out(l,'/product/'+p.slug+'/',n,f(p,'summary',l)||n+' – '+S.brand,`<div class=pd><div>${img(p,l)}</div><div><h1>${n}</h1><p class=pr>${t.price} ${fmt(p.price)}${p.old?` <s>${fmt(p.old)}</s>`:''}</p>${md(p.body[l])}<p><a class=btn href="tel:${S.phone}">${t.call}</a> <a class=btn href="https://wa.me/${S.whatsapp}?text=${encodeURIComponent(n)}">${t.wa}</a></p>${form(n)}</div></div><h2>${t.rel}</h2>${grid(prods.filter(x=>x.sub==p.sub&&x!=p).concat(prods.filter(x=>x.category==p.category&&x.sub!=p.sub)).slice(0,4))}`,{'@context':'https://schema.org','@type':'Product',name:n,offers:{'@type':'Offer',priceCurrency:'BDT',price:p.price}})}
+ for(const[d,a,h]of[['works',works,t.works],['blog',blog,t.blog],['areas',areas,t.areas]]){
+  out(l,'/'+d+'/',h,h+' – '+S.brand,`<h1>${h}</h1><div class=grid>${a.map(x=>`<a class=card href="${u(l,'/'+d+'/'+x.slug+'/')}">${img(x,l)}<h3>${f(x,'title',l)}</h3><p>${f(x,'summary',l)}</p></a>`).join('')}</div>`);
+  for(const x of a)out(l,'/'+d+'/'+x.slug+'/',f(x,'title',l),f(x,'summary',l),`<article><h1>${f(x,'title',l)}</h1>${x.image?img(x,l):''}${md(x.body[l])}${d=='areas'?`<h2>${t.visit}</h2><div class=grid>${rooms}</div>${form(f(x,'title',l))}`:''}</article>`,d=='areas'?{'@context':'https://schema.org','@type':'FurnitureStore',name:S.brand,telephone:S.phone,areaServed:x.title,address:{'@type':'PostalAddress',addressLocality:'Chattogram',addressCountry:'BD'}}:null)}
+ for(const x of pg)out(l,'/'+x.slug+'/',f(x,'title',l),f(x,'summary',l),`<article><h1>${f(x,'title',l)}</h1>${md(x.body[l])}${x.form?form(f(x,'title',l)):''}</article>`)}
+fs.cpSync(P.join(R,'static'),O,{recursive:true});
+const urls=[...new Set(pages)].flatMap(p=>[p,'/bn'+p]).map(p=>`<url><loc>${S.domain}${p}</loc></url>`).join('');
+fs.writeFileSync(P.join(O,'sitemap.xml'),`<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
+fs.writeFileSync(P.join(O,'robots.txt'),`User-agent: *\nAllow: /\nSitemap: ${S.domain}/sitemap.xml\n`);
+console.log('Built',pages.length*2,'pages');

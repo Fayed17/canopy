@@ -1,0 +1,182 @@
+{
+ "brand": "CANOPY",
+ "domain": "https://canopyfurniture.com.bd",
+ "phone": "+8801XXXXXXXXX",
+ "whatsapp": "8801XXXXXXXXX",
+ "email": "hello@canopyfurniture.com.bd",
+ "formAction": "https://formspree.io/f/YOUR_FORM_ID",
+ "address": {
+  "en": "GEC Circle, Chattogram",
+  "bn": "জিইসি সার্কেল, চট্টগ্রাম"
+ },
+ "social": {
+  "Facebook": "https://facebook.com/",
+  "Instagram": "https://instagram.com/",
+  "YouTube": "https://youtube.com/"
+ },
+ "t": {
+  "en": {
+   "promo": "Free delivery in Chattogram · EMI available",
+   "slogan": "fits everywhere",
+   "tagline": "Furniture in Chattogram",
+   "desc": "Canopy Furniture: solid wood sofas, beds, dining and office furniture in Chattogram, Bangladesh.",
+   "hero": "Comfort that fits every corner",
+   "sub": "Solid wood frames and soft-touch fabrics designed for real homes.",
+   "dining": "Gather around something made to last"
+  },
+  "bn": {
+   "promo": "চট্টগ্রামে ফ্রি ডেলিভারি · ইএমআই সুবিধা",
+   "slogan": "fits everywhere",
+   "tagline": "চট্টগ্রামের ফার্নিচার",
+   "desc": "ক্যানোপি ফার্নিচার: চট্টগ্রামে সলিড কাঠের সোফা, খাট, ডাইনিং ও অফিস ফার্নিচার।",
+   "hero": "আরাম, যা প্রতিটি কোণে মানানসই",
+   "sub": "সলিড কাঠের ফ্রেম ও নরম ফ্যাব্রিকে তৈরি আপনার ঘরের জন্য।",
+   "dining": "যা টেকে বছরের পর বছর, তার চারপাশে একসাথে বসুন"
+  }
+ },
+ "services": [
+  {
+   "en": "Free delivery",
+   "bn": "ফ্রি ডেলিভারি"
+  },
+  {
+   "en": "Free installation",
+   "bn": "ফ্রি ইনস্টলেশন"
+  },
+  {
+   "en": "Warranty",
+   "bn": "ওয়ারেন্টি"
+  },
+  {
+   "en": "EMI",
+   "bn": "ইএমআই"
+  }
+ ],
+ "showrooms": [
+  {
+   "city": {
+    "en": "Chattogram",
+    "bn": "চট্টগ্রাম"
+   },
+   "area": {
+    "en": "GEC Circle",
+    "bn": "জিইসি সার্কেল"
+   },
+   "hours": "10am – 8pm"
+  }
+ ],
+ "cats": [
+  {
+   "slug": "living",
+   "en": "Living",
+   "bn": "লিভিং",
+   "subs": [
+    {
+     "slug": "sofas",
+     "en": "Sofas",
+     "bn": "সোফা"
+    },
+    {
+     "slug": "armchairs",
+     "en": "Armchairs",
+     "bn": "আর্মচেয়ার"
+    },
+    {
+     "slug": "coffee-tables",
+     "en": "Coffee Tables",
+     "bn": "কফি টেবিল"
+    }
+   ]
+  },
+  {
+   "slug": "bedroom",
+   "en": "Bedroom",
+   "bn": "বেডরুম",
+   "subs": [
+    {
+     "slug": "beds",
+     "en": "Beds",
+     "bn": "খাট"
+    },
+    {
+     "slug": "nightstands",
+     "en": "Nightstands",
+     "bn": "সাইড টেবিল"
+    },
+    {
+     "slug": "wardrobes",
+     "en": "Wardrobes",
+     "bn": "আলমারি"
+    }
+   ]
+  },
+  {
+   "slug": "dining",
+   "en": "Dining",
+   "bn": "ডাইনিং",
+   "subs": [
+    {
+     "slug": "dining-tables",
+     "en": "Dining Tables",
+     "bn": "ডাইনিং টেবিল"
+    },
+    {
+     "slug": "dining-chairs",
+     "en": "Dining Chairs",
+     "bn": "ডাইনিং চেয়ার"
+    }
+   ]
+  },
+  {
+   "slug": "office",
+   "en": "Office",
+   "bn": "অফিস",
+   "subs": [
+    {
+     "slug": "desks",
+     "en": "Desks",
+     "bn": "ডেস্ক"
+    },
+    {
+     "slug": "office-chairs",
+     "en": "Office Chairs",
+     "bn": "অফিস চেয়ার"
+    }
+   ]
+  },
+  {
+   "slug": "kids",
+   "en": "Kids",
+   "bn": "কিডস",
+   "subs": [
+    {
+     "slug": "kids-beds",
+     "en": "Kids Beds",
+     "bn": "বাচ্চাদের খাট"
+    },
+    {
+     "slug": "study-tables",
+     "en": "Study Tables",
+     "bn": "পড়ার টেবিল"
+    }
+   ]
+  },
+  {
+   "slug": "storage",
+   "en": "Storage",
+   "bn": "স্টোরেজ",
+   "subs": [
+    {
+     "slug": "sideboards",
+     "en": "Sideboards",
+     "bn": "সাইডবোর্ড"
+    },
+    {
+     "slug": "cabinets",
+     "en": "Cabinets",
+     "bn": "ক্যাবিনেট"
+    }
+   ]
+  }
+ ]
+}
