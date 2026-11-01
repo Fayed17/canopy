@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://canopyfurniture.com.bd/sitemap.xml
