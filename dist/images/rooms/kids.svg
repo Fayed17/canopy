@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><title>Kids room</title>
+<rect width="400" height="400" fill="#f4ecdf"/><rect y="320" width="400" height="80" fill="#e6d6bf"/>
+<circle cx="80" cy="80" r="14" fill="#f6d9a8"/><circle cx="130" cy="55" r="9" fill="#cdb9a2"/><path d="M300 60l8 16 18 3-13 12 3 18-16-9-16 9 3-18-13-12 18-3z" fill="#f6d9a8"/>
+<rect x="60" y="120" width="16" height="205" fill="#8a5a3c"/><rect x="250" y="120" width="16" height="205" fill="#8a5a3c"/>
+<rect x="76" y="140" width="174" height="8" fill="#a37451"/><rect x="76" y="160" width="174" height="14" fill="#8c7a85"/><rect x="76" y="170" width="174" height="34" fill="#cdb9a2"/>
+<rect x="76" y="240" width="174" height="8" fill="#a37451"/><rect x="76" y="260" width="174" height="14" fill="#6e4a63"/><rect x="76" y="270" width="174" height="34" fill="#cdb9a2"/>
+<rect x="90" y="150" width="40" height="18" rx="8" fill="#fffaf6"/><rect x="90" y="250" width="40" height="18" rx="8" fill="#fffaf6"/>
+<rect x="266" y="140" width="6" height="185" fill="#a37451"/><rect x="300" y="140" width="6" height="185" fill="#a37451"/>
+<rect x="266" y="170" width="40" height="6" fill="#a37451"/><rect x="266" y="215" width="40" height="6" fill="#a37451"/><rect x="266" y="260" width="40" height="6" fill="#a37451"/>
+<circle cx="345" cy="300" r="22" fill="#6e4a63"/></svg>

@@ -5,12 +5,13 @@
  "whatsapp": "8801839039416",
  "email": "hello@canopyfurniture.com.bd",
  "formAction": "https://formspree.io/f/YOUR_FORM_ID",
+ "diningImage": "/images/dining-feature.svg",
  "address": {
   "en": "GEC Circle, Chattogram",
   "bn": "জিইসি সার্কেল, চট্টগ্রাম"
  },
  "social": {
-    "Facebook": "https://www.facebook.com/profile.php?id=61560038396432",
+  "Facebook": "https://www.facebook.com/profile.php?id=61560038396432",
   "Instagram": "https://instagram.com/",
   "YouTube": "https://youtube.com/"
  },
@@ -65,120 +66,6 @@
     "bn": "জিইসি সার্কেল"
    },
    "hours": "10am – 8pm"
-  }
- ],
- "cats": [
-  {
-   "slug": "living",
-   "en": "Living",
-   "bn": "লিভিং",
-   "subs": [
-    {
-     "slug": "sofas",
-     "en": "Sofas",
-     "bn": "সোফা"
-    },
-    {
-     "slug": "armchairs",
-     "en": "Armchairs",
-     "bn": "আর্মচেয়ার"
-    },
-    {
-     "slug": "coffee-tables",
-     "en": "Coffee Tables",
-     "bn": "কফি টেবিল"
-    }
-   ]
-  },
-  {
-   "slug": "bedroom",
-   "en": "Bedroom",
-   "bn": "বেডরুম",
-   "subs": [
-    {
-     "slug": "beds",
-     "en": "Beds",
-     "bn": "খাট"
-    },
-    {
-     "slug": "nightstands",
-     "en": "Nightstands",
-     "bn": "সাইড টেবিল"
-    },
-    {
-     "slug": "wardrobes",
-     "en": "Wardrobes",
-     "bn": "আলমারি"
-    }
-   ]
-  },
-  {
-   "slug": "dining",
-   "en": "Dining",
-   "bn": "ডাইনিং",
-   "subs": [
-    {
-     "slug": "dining-tables",
-     "en": "Dining Tables",
-     "bn": "ডাইনিং টেবিল"
-    },
-    {
-     "slug": "dining-chairs",
-     "en": "Dining Chairs",
-     "bn": "ডাইনিং চেয়ার"
-    }
-   ]
-  },
-  {
-   "slug": "office",
-   "en": "Office",
-   "bn": "অফিস",
-   "subs": [
-    {
-     "slug": "desks",
-     "en": "Desks",
-     "bn": "ডেস্ক"
-    },
-    {
-     "slug": "office-chairs",
-     "en": "Office Chairs",
-     "bn": "অফিস চেয়ার"
-    }
-   ]
-  },
-  {
-   "slug": "kids",
-   "en": "Kids",
-   "bn": "কিডস",
-   "subs": [
-    {
-     "slug": "kids-beds",
-     "en": "Kids Beds",
-     "bn": "বাচ্চাদের খাট"
-    },
-    {
-     "slug": "study-tables",
-     "en": "Study Tables",
-     "bn": "পড়ার টেবিল"
-    }
-   ]
-  },
-  {
-   "slug": "storage",
-   "en": "Storage",
-   "bn": "স্টোরেজ",
-   "subs": [
-    {
-     "slug": "sideboards",
-     "en": "Sideboards",
-     "bn": "সাইডবোর্ড"
-    },
-    {
-     "slug": "cabinets",
-     "en": "Cabinets",
-     "bn": "ক্যাবিনেট"
-    }
-   ]
   }
  ]
 }

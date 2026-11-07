@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><title>Office</title>
+<rect width="400" height="400" fill="#eae6df"/><rect y="320" width="400" height="80" fill="#d9d0c4"/>
+<rect x="250" y="60" width="110" height="18" fill="#8a5a3c"/><rect x="262" y="34" width="14" height="26" fill="#432a3c"/><rect x="280" y="40" width="14" height="20" fill="#8c7a85"/><rect x="298" y="30" width="12" height="30" fill="#cdb9a2"/>
+<rect x="60" y="200" width="260" height="16" rx="4" fill="#8a5a3c"/><rect x="72" y="216" width="12" height="110" fill="#6b4430"/>
+<rect x="230" y="216" width="80" height="110" fill="#a37451"/><rect x="242" y="236" width="56" height="4" fill="#6b4430"/><rect x="242" y="276" width="56" height="4" fill="#6b4430"/>
+<rect x="130" y="130" width="100" height="64" rx="6" fill="#432a3c"/><rect x="138" y="138" width="84" height="48" fill="#cdb9a2"/><rect x="172" y="194" width="16" height="6" fill="#432a3c"/>
+<rect x="104" y="184" width="16" height="16" rx="3" fill="#6e4a63"/><path d="M112 184c-12-14-6-28 0-34 6 6 12 20 0 34z" fill="#7d8f69"/>
+<rect x="120" y="230" width="70" height="60" rx="16" fill="#432a3c"/><rect x="115" y="285" width="80" height="16" rx="8" fill="#6e4a63"/><rect x="151" y="301" width="8" height="22" fill="#432a3c"/>
+<path d="M125 330h60" stroke="#432a3c" stroke-width="6" stroke-linecap="round"/></svg>

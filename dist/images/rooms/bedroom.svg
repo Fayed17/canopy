@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><title>Bedroom</title>
+<rect width="400" height="400" fill="#efe5f0"/><rect y="310" width="400" height="90" fill="#dccbd8"/>
+<circle cx="320" cy="70" r="26" fill="#f6d9a8"/><circle cx="332" cy="62" r="24" fill="#efe5f0"/>
+<rect x="80" y="130" width="240" height="130" rx="14" fill="#6e4a63"/><rect x="60" y="230" width="280" height="80" rx="10" fill="#fffaf6"/>
+<rect x="60" y="250" width="280" height="60" rx="10" fill="#cdb9a2"/>
+<rect x="95" y="200" width="90" height="40" rx="16" fill="#fffaf6" stroke="#e2d3c2" stroke-width="4"/><rect x="215" y="200" width="90" height="40" rx="16" fill="#fffaf6" stroke="#e2d3c2" stroke-width="4"/>
+<rect x="66" y="310" width="10" height="22" fill="#432a3c"/><rect x="324" y="310" width="10" height="22" fill="#432a3c"/>
+<rect x="10" y="250" width="44" height="60" fill="#8c7a85"/><rect x="29" y="205" width="6" height="45" fill="#432a3c"/><path d="M14 205h36l-8-28h-20z" fill="#f6d9a8"/></svg>
