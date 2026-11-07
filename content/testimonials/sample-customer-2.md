@@ -3,6 +3,7 @@ title: Customer Name
 title_bn: গ্রাহকের নাম
 place: Agrabad
 place_bn: আগ্রাবাদ
+draft: false
 ---
 SAMPLE: replace with a real review from the Facebook page.
 <!--bn-->

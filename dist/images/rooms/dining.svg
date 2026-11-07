@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><title>Dining room</title>
+<rect width="400" height="400" fill="#f3ebe0"/><rect y="320" width="400" height="80" fill="#e2d3c2"/>
+<path d="M200 40v50" stroke="#432a3c" stroke-width="4"/><path d="M160 120h80l-15-30h-50z" fill="#432a3c"/><ellipse cx="200" cy="122" rx="40" ry="5" fill="#f6d9a8"/>
+<rect x="60" y="165" width="20" height="160" rx="6" fill="#6e4a63"/><rect x="50" y="245" width="60" height="14" rx="4" fill="#6e4a63"/><rect x="98" y="259" width="8" height="66" fill="#6e4a63"/>
+<rect x="320" y="165" width="20" height="160" rx="6" fill="#6e4a63"/><rect x="290" y="245" width="60" height="14" rx="4" fill="#6e4a63"/><rect x="294" y="259" width="8" height="66" fill="#6e4a63"/>
+<rect x="95" y="215" width="210" height="16" rx="4" fill="#8a5a3c"/><rect x="120" y="231" width="12" height="94" fill="#6b4430"/><rect x="268" y="231" width="12" height="94" fill="#6b4430"/>
+<rect x="190" y="185" width="20" height="30" rx="4" fill="#fffaf6"/><path d="M200 185c-14-20 4-36 0-50 14 14 12 34 0 50z" fill="#7d8f69"/>
+<circle cx="150" cy="212" r="9" fill="#fffaf6"/><circle cx="250" cy="212" r="9" fill="#fffaf6"/></svg>

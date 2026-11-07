@@ -1,0 +1,57 @@
+{
+  "home": {
+    "seo_title": "",
+    "seo_title_bn": "",
+    "summary": "",
+    "summary_bn": "",
+    "date": "2026-11-07",
+    "index": true,
+    "canonical": "",
+    "canonical_bn": ""
+  },
+  "blog": {
+    "title": "Blog",
+    "title_bn": "ব্লগ",
+    "subtitle": "Furniture tips and ideas for Chattogram homes",
+    "subtitle_bn": "চট্টগ্রামের ঘরের জন্য ফার্নিচার টিপস ও আইডিয়া",
+    "seo_title": "",
+    "seo_title_bn": "",
+    "summary": "",
+    "summary_bn": "",
+    "date": "2026-11-07",
+    "index": true,
+    "canonical": "",
+    "canonical_bn": "",
+    "draft": false
+  },
+  "works": {
+    "title": "Our Works",
+    "title_bn": "আমাদের কাজ",
+    "subtitle": "Homes and offices we have furnished",
+    "subtitle_bn": "আমাদের সাজানো বাসা ও অফিস",
+    "seo_title": "",
+    "seo_title_bn": "",
+    "summary": "",
+    "summary_bn": "",
+    "date": "2026-11-07",
+    "index": true,
+    "canonical": "",
+    "canonical_bn": "",
+    "draft": false
+  },
+  "areas": {
+    "title": "Areas we serve",
+    "title_bn": "আমাদের সেবার এলাকা",
+    "subtitle": "Furniture delivery and installation across Chattogram",
+    "subtitle_bn": "চট্টগ্রাম জুড়ে ফার্নিচার ডেলিভারি ও ইনস্টলেশন",
+    "seo_title": "",
+    "seo_title_bn": "",
+    "summary": "",
+    "summary_bn": "",
+    "date": "2026-11-07",
+    "index": true,
+    "canonical": "",
+    "canonical_bn": "",
+    "draft": false
+  }
+}

@@ -14,3 +14,8 @@ h1,h2,h3,.logo{font-family:var(--font-primary);font-weight:700;text-transform:up
 .pd{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-top:32px}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-content:start}.gallery img{width:100%;aspect-ratio:4/5;object-fit:cover}.pr{font-size:24px}.enq{display:grid;gap:8px;margin-top:20px;max-width:420px}input,textarea{padding:10px;border:1px solid #cdb9a2;font:inherit}.subs a{margin-right:16px;text-decoration:underline}
 footer{background:var(--p);color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;padding:40px 5vw;margin-top:40px}footer a{margin-right:10px}.wa{position:fixed;right:16px;bottom:16px;background:#25d366;color:#fff;padding:10px 16px;border-radius:30px;z-index:20}
 @media(max-width:700px){.pd,.hero{grid-template-columns:1fr}.hero-image{aspect-ratio:4/3}.dd div{position:static;display:block;border:0;padding:0 0 0 12px}}
+.rooms img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-radius:50%}.rooms a:hover img{outline:3px solid var(--p);outline-offset:3px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.feat img{width:100%;display:block}
+@media(max-width:700px){.feat{grid-template-columns:1fr}}
+.lead{font-size:18px;opacity:.75;margin-top:-6px}.crumb{font-size:13px;opacity:.7;margin:0}.crumb a{text-decoration:underline}.date{font-size:14px;opacity:.7}main>.crumb,main>.lead{padding-left:5vw;padding-right:5vw}main>.crumb{padding-top:24px}
+.gallery img:only-child,.gallery img:first-child:nth-last-child(odd){grid-column:1/-1}
